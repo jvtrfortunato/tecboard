@@ -11,7 +11,7 @@ function FormularioDeEvento () {
         <label htmlFor="nome">
           Qual o nome do evento?
         </label>
-        <input type="text" id='nome'/>
+        <input type="text" id='nome' placeholder='Summer dev hits' />
       </fieldset>
     </form>
   )
