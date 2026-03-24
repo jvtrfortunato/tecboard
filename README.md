@@ -1,16 +1,74 @@
-# React + Vite
+# ⚛️ Projeto React com Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação desenvolvida durante o curso **React 19: JSX, componentes, form action e useState** da Alura.
 
-Currently, two official plugins are available:
+O projeto tem como objetivo praticar os conceitos fundamentais do React moderno, incluindo criação de componentes, manipulação de estado e construção de interfaces dinâmicas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* JavaScript (ES6+)
+* HTML5
+* CSS3
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto, foram abordados conceitos como:
+
+* JSX e renderização de elementos
+* Criação e reutilização de componentes
+* Uso do hook `useState`
+* Manipulação de eventos
+* Formulários com React
+* Organização de código em projetos React
+
+---
+
+## 📦 Como rodar o projeto
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/jvtrfotunato/tecboard.git
+```
+
+### 2. Acessar a pasta
+
+```bash
+cd tecboard
+```
+
+### 3. Instalar dependências
+
+```bash
+npm install
+```
+
+### 4. Rodar o projeto
+
+```bash
+npm run dev
+```
+
+O projeto estará disponível em:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📁 Estrutura do projeto
+
+```bash
+src/
+ ├── components/
+ ├── App.jsx
+ ├── main.jsx
+ └── assets/
+```
