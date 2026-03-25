@@ -1,17 +1,29 @@
-import './formulario-de-evento.estilos.css'
+import "./formulario-de-evento.estilos.css";
 import { CampoDeEntrada } from "../CampoDeEntrada";
 import { CampoDeFormulario } from "../CampoDeFormulario";
 import { Label } from "../Label";
 import { TituloFormulario } from "../TituloFormulario";
-import { Botao } from '../Botao';
-import { ListaSuspensa } from '../ListaSuspensa';
-
+import { Botao } from "../Botao";
+import { ListaSuspensa } from "../ListaSuspensa";
 
 export function FormularioDeEvento({ temas }) {
+  function aoFormSubmetido(formData) {
+    console.log("opa, ta na hora de criar um novo evento", formData);
+    const evento = {
+      capa: formData.get('capaEvento'),
+      tema: temas.find(function(item) {
+        return item.id == formData.get('temaEvento')
+      }),
+      data: new Date(formData.get('dataEvento')),
+      titulo: formData.get('nomeEvento'),
+    };
+    console.log('esse é o evento', evento)
+  }
+
   return (
-    <form className="form-evento">
+    <form className="form-evento" action={aoFormSubmetido}>
       <TituloFormulario>Preencha para criar um evento</TituloFormulario>
-      <div className='campos'>
+      <div className="campos">
         <CampoDeFormulario>
           <Label htmlFor="nomeEvento">Qual o nome do evento?</Label>
           <CampoDeEntrada
@@ -41,17 +53,11 @@ export function FormularioDeEvento({ temas }) {
         </CampoDeFormulario>
         <CampoDeFormulario>
           <Label htmlFor="temaEvento">Tema do evento</Label>
-          <ListaSuspensa 
-            id="temaEvento"
-            name="temaEvento"
-            itens={temas}  
-          />
+          <ListaSuspensa id="temaEvento" name="temaEvento" itens={temas} />
         </CampoDeFormulario>
       </div>
-      <div className='acoes'>
-        <Botao>
-          Criar evento
-        </Botao>
+      <div className="acoes">
+        <Botao>Criar evento</Botao>
       </div>
     </form>
   );
